@@ -22,34 +22,6 @@
             }
           },
           {
-            "id": "622c82d9310dc149",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "操作系统/处理器与寄存器.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "处理器与寄存器"
-            }
-          },
-          {
-            "id": "040fe2a6c8d22afb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "操作系统/进程管理.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "进程管理"
-            }
-          },
-          {
             "id": "c06c5b751425f6c1",
             "type": "leaf",
             "state": {
@@ -64,7 +36,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -240,22 +212,22 @@
   },
   "active": "c06c5b751425f6c1",
   "lastOpenFiles": [
+    "编译原理/编译原理.md",
     "编译原理/语法分析.md",
+    "编译原理/词法分析相关题目.md",
     "编译原理/词法分析.md",
+    "操作系统/进程管理.md",
+    "操作系统/处理器与寄存器.md",
+    "操作系统/并发程序设计.md",
     "Pasted image 20260609111929.png",
     "Pasted image 20260609111833.png",
     "Pasted image 20260609105703.png",
     "Pasted image 20260609105533.png",
-    "编译原理/词法分析相关题目.md",
     "操作系统/中断管理.md",
     "未命名",
-    "编译原理/编译原理.md",
     "操作系统/多线程技术.md",
     "编译原理",
-    "操作系统/进程管理.md",
     "欢迎.md",
-    "操作系统/处理器与寄存器.md",
-    "操作系统/并发程序设计.md",
     "操作系统",
     "BI homework/截屏2026-05-27 18.58.53.png",
     "未命名.base",
