@@ -1,5 +1,5 @@
 241250033 谢浩天
-
+[[Business Intelligence]]
 ## 数据集选用
 本试验使用的数据集是 UCI Machine Learning Repository 的 Online Retail数据集，该数据集记录了一家英国在线零售企业中2010年12月至2011年12月期间的交易明细，业务内容主要包括订单、商品、客户、国家、数量、单价和交易时间等信息。
 原始文件：`Online Retail.xlsx`
