@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编译原理/语法分析.md",
+                "file": "商务智能/Business Intelligence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "语法分析"
+              "title": "Business Intelligence"
             }
           }
         ],
@@ -213,9 +213,11 @@
   },
   "active": "c06c5b751425f6c1",
   "lastOpenFiles": [
+    "编译原理/语法分析.md",
+    "商务智能/Business Intelligence.md",
+    "商务智能",
     "编译原理/词法分析.md",
     "操作系统/并发程序设计.md",
-    "编译原理/语法分析.md",
     "编译原理/词法分析相关题目.md",
     "编译原理/编译原理.md",
     "操作系统/进程管理.md",
