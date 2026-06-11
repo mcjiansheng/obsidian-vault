@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编译原理/语法分析.md",
+                "file": "操作系统/处理器调度.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "语法分析"
+              "title": "处理器调度"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "深度优先和广度优先算法解决图上搜索问题"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -211,17 +210,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c06c5b751425f6c1",
+  "active": "7a356bfcfadd25e3",
   "lastOpenFiles": [
-    "操作系统/处理器调度.md",
+    "编译原理/语法分析.md",
     "高级算法/深度优先和广度优先算法解决图上搜索问题.md",
+    "操作系统/处理器调度.md",
     "高级算法",
     "Pasted image 20260611105021.png",
     "编译原理/自底向上语法分析.md",
     "Pasted image 20260610211047.png",
     "Pasted image 20260610200238.png",
     "截屏2026-06-10 19.58.56.png",
-    "编译原理/语法分析.md",
     "编译原理/词法分析.md",
     "编译原理/编译原理.md",
     "商务智能/Business Intelligence.md",
