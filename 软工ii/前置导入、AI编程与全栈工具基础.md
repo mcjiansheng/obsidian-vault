@@ -238,3 +238,80 @@ HTTP/1.1        协议版本
 **Spring Boot： 快速构建 RESTful API**
 Spring Boot 的目标是解决传统 Spring 项目配置繁琐的问题
 传统 Spring 需要大量XML配置，而 Spring Boot 通过自动配置、Starter 依赖、内嵌服务器让项目可以快速启动
+
+**Spring Boot 的核心优势**
+
+| 特性         | 含义                          |
+| ---------- | --------------------------- |
+| 约定优于配置     | 默认配置覆盖大多数场景，只配置特殊情况         |
+| 自动配置       | 根据依赖自动装配 MVC、DataSource 等组件 |
+| Starter 依赖 | 一行引入一整套功能                   |
+| 内嵌 Tomcat  | 直接运行 JAR，不用手动部署服务器          |
+**Spring Boot 项目结构**
+
+```
+src/main/java/com/example/
+├── DemoApplication.java    启动类
+├── controller/             控制器，接收 HTTP 请求
+├── service/                服务层，写业务逻辑
+├── mapper/                 数据访问层，写 MyBatis 接口
+└── entity/                 实体类，对应数据库表
+```
+Controller：你对外开放的接口
+Service：真正的业务规则
+Mapper：数据库 SQL 操作
+Entity：数据库表在 Java 中的对象表示
+
+**Spring Security 认证与授权**
+
+|概念|英文|回答的问题|例子|
+|---|---|---|---|
+|认证|Authentication / AuthN|你是谁？|用户名 + 密码登录|
+|授权|Authorization / AuthZ|你能做什么？|管理员才能删除用户|
+核心：通过 Filter Chain 过滤器链 统一处理安全逻辑
+
+HTTP 请求
+  ↓
+UsernamePasswordAuthenticationFilter
+  ↓
+JwtAuthenticationFilter
+  ↓
+ExceptionTranslationFilter
+  ↓
+FilterSecurityInterceptor
+  ↓
+Controller
+
+只有通过过滤器检查的请求，才能到达业务代码
+
+**JWT 无状态登录认证**
+全称 JSON Web Token，是一种常见的无状态认证方案
+用户登录
+  ↓
+服务器验证用户名密码
+  ↓
+服务器生成 Token 返回给客户端
+  ↓
+客户端保存 Token
+  ↓
+后续请求在 Authorization 头里带 Token
+  ↓
+服务器验证 Token 签名和过期时间
+
+JWT的结构
+`Header.Payload.Signature`
+
+|部分|作用|
+|---|---|
+|Header|说明签名算法，比如 HS256|
+|Payload|存放用户信息和过期时间|
+|Signature|用密钥签名，防止篡改|
+### 项目级 Vibe Coding ： AI 参与全栈开发，但工程纪律不能消失
+VibeCoding 是用自然语言描述意图，让 AI 参与从原型、代码、调试、联调到部署的全过程。它不是“不会写代码也能做软件”的神话，而是把人的价值转移到需求表达、问题定义、输出审查、安全质量把关上。
+
+Google Stitch：用自然语言生成 UI 原型。  
+Google AI Studio：从原型生成 Web 前端。  
+Claude Code：生成后端 API、执行命令、管理项目。  
+通义灵码 + Expo：生成移动端 App。  
+Expo Go：真机调试。  
+MCP chrome-devtools：让 AI 读取浏览器 Console、Network、DOM、样式和请求响应。
