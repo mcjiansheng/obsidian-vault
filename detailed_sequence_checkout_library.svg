@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="black"/>
+  </marker>
+  <marker id="hollowTriangle" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+    <path d="M 11 6 L 1 1 L 1 11 z" fill="white" stroke="black" stroke-width="1"/>
+  </marker>
+</defs>
+<style>
+  .t { font-family: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", sans-serif; fill: #111; }
+  .title { font-size: 28px; font-weight: 700; }
+  .subtitle { font-size: 16px; }
+  .pkg { fill: #f8f8f8; stroke: #111; stroke-width: 1.6; }
+  .pkg-tab { fill: #fff; stroke: #111; stroke-width: 1.4; }
+  .class { fill: #fff; stroke: #111; stroke-width: 1.6; }
+  .line { stroke: #111; stroke-width: 1.6; fill: none; }
+  .dash { stroke-dasharray: 8 6; }
+  .note { fill: #fffbea; stroke: #111; stroke-width: 1.4; }
+</style>
+<text class="t title" x="900" y="44" font-size="28" font-weight="700" text-anchor="middle">详细顺序图：办理借书用例（集中式控制）</text>
+<text class="t subtitle" x="900" y="78" font-size="16" font-weight="400" text-anchor="middle">由系统顺序图的系统事件展开为内部对象协作：Boundary → Controller → Service → Repository / Entity</text>
+<rect class="class" x="18" y="125" width="144" height="58" rx="0" ry="0"/>
+<text class="t" x="90" y="161" font-size="13" font-weight="400" text-anchor="middle">管理员</text>
+<line class="line dash" x1="90" y1="183" x2="90" y2="1120"/>
+<rect class="class" x="208" y="125" width="144" height="58" rx="0" ry="0"/>
+<text class="t" x="280" y="150" font-size="12" font-weight="400" text-anchor="middle">checkoutPage</text>
+<text class="t" x="280" y="170" font-size="12" font-weight="400" text-anchor="middle">:CheckoutPage</text>
+<line class="line dash" x1="280" y1="183" x2="280" y2="1120"/>
+<rect class="class" x="443" y="125" width="144" height="58" rx="0" ry="0"/>
+<text class="t" x="515" y="150" font-size="12" font-weight="400" text-anchor="middle">controller</text>
+<text class="t" x="515" y="170" font-size="12" font-weight="400" text-anchor="middle">:CheckoutController</text>
+<line class="line dash" x1="515" y1="183" x2="515" y2="1120"/>
+<rect class="class" x="698" y="125" width="144" height="58" rx="0" ry="0"/>
+<text class="t" x="770" y="150" font-size="12" font-weight="400" text-anchor="middle">service</text>
+<text class="t" x="770" y="170" font-size="12" font-weight="400" text-anchor="middle">:CheckoutService</text>
+<line class="line dash" x1="770" y1="183" x2="770" y2="1120"/>
+<rect class="class" x="963" y="125" width="144" height="58" rx="0" ry="0"/>
+<text class="t" x="1035" y="150" font-size="12" font-weight="400" text-anchor="middle">borrowerRepo</text>
+<text class="t" x="1035" y="170" font-size="12" font-weight="400" text-anchor="middle">:BorrowerRepository</text>
+<line class="line dash" x1="1035" y1="183" x2="1035" y2="1120"/>
+<rect class="class" x="1213" y="125" width="144" height="58" rx="0" ry="0"/>
+<text class="t" x="1285" y="150" font-size="12" font-weight="400" text-anchor="middle">copyRepo</text>
+<text class="t" x="1285" y="170" font-size="12" font-weight="400" text-anchor="middle">:BookCopyRepository</text>
+<line class="line dash" x1="1285" y1="183" x2="1285" y2="1120"/>
+<rect class="class" x="1438" y="125" width="144" height="58" rx="0" ry="0"/>
+<text class="t" x="1510" y="150" font-size="12" font-weight="400" text-anchor="middle">loan</text>
+<text class="t" x="1510" y="170" font-size="12" font-weight="400" text-anchor="middle">:Loan</text>
+<line class="line dash" x1="1510" y1="183" x2="1510" y2="1120"/>
+<rect class="class" x="1628" y="125" width="144" height="58" rx="0" ry="0"/>
+<text class="t" x="1700" y="150" font-size="12" font-weight="400" text-anchor="middle">loanRepo</text>
+<text class="t" x="1700" y="170" font-size="12" font-weight="400" text-anchor="middle">:LoanRepository</text>
+<line class="line dash" x1="1700" y1="183" x2="1700" y2="1120"/>
+<rect x="275" y="225" width="10" height="815" fill="white" stroke="black" stroke-width="1"/>
+<rect x="510" y="250" width="10" height="790" fill="white" stroke="black" stroke-width="1"/>
+<rect x="765" y="280" width="10" height="760" fill="white" stroke="black" stroke-width="1"/>
+<rect x="1030" y="315" width="10" height="30" fill="white" stroke="black" stroke-width="1"/>
+<rect x="1280" y="565" width="10" height="85" fill="white" stroke="black" stroke-width="1"/>
+<rect x="1505" y="695" width="10" height="195" fill="white" stroke="black" stroke-width="1"/>
+<rect x="1695" y="980" width="10" height="30" fill="white" stroke="black" stroke-width="1"/>
+<line class="line" x1="90" y1="225" x2="280" y2="225" marker-end="url(#arrow)"/>
+<text class="t" x="185.0" y="217" font-size="12" font-weight="400" text-anchor="middle">输入借书人编号</text>
+<line class="line" x1="280" y1="255" x2="515" y2="255" marker-end="url(#arrow)"/>
+<text class="t" x="397.5" y="247" font-size="12" font-weight="400" text-anchor="middle">1: startCheckout(borrowerId)</text>
+<line class="line" x1="515" y1="285" x2="770" y2="285" marker-end="url(#arrow)"/>
+<text class="t" x="642.5" y="277" font-size="12" font-weight="400" text-anchor="middle">1.1: startCheckout(borrowerId)</text>
+<line class="line" x1="770" y1="315" x2="1035" y2="315" marker-end="url(#arrow)"/>
+<text class="t" x="902.5" y="307" font-size="12" font-weight="400" text-anchor="middle">1.1.1: findById(borrowerId)</text>
+<line class="line dash" x1="1035" y1="345" x2="770" y2="345" marker-end="url(#arrow)"/>
+<text class="t" x="902.5" y="337" font-size="12" font-weight="400" text-anchor="middle">borrower</text>
+<line class="line dash" x1="770" y1="380" x2="90" y2="380" marker-end="url(#arrow)"/>
+<text class="t" x="430.0" y="372" font-size="11" font-weight="400" text-anchor="middle">显示借书人状态 / sessionId</text>
+<rect x="50" y="435" width="1690" height="370" fill="none" stroke="black" stroke-width="1.5"/>
+<rect x="50" y="435" width="120" height="32" fill="white" stroke="black" stroke-width="1.3"/>
+<text class="t" x="110" y="457" font-size="13" font-weight="700" text-anchor="middle">loop</text>
+<text class="t" x="315" y="457" font-size="13" font-weight="400" text-anchor="middle">[每一本待借图书副本]</text>
+<line class="line" x1="90" y1="500" x2="280" y2="500" marker-end="url(#arrow)"/>
+<text class="t" x="185.0" y="492" font-size="12" font-weight="400" text-anchor="middle">扫描图书副本条码</text>
+<line class="line" x1="280" y1="530" x2="515" y2="530" marker-end="url(#arrow)"/>
+<text class="t" x="397.5" y="522" font-size="12" font-weight="400" text-anchor="middle">2: addBookCopy(sessionId, barcode)</text>
+<line class="line" x1="515" y1="560" x2="770" y2="560" marker-end="url(#arrow)"/>
+<text class="t" x="642.5" y="552" font-size="12" font-weight="400" text-anchor="middle">2.1: addBookCopy(sessionId, barcode)</text>
+<line class="line" x1="770" y1="590" x2="1285" y2="590" marker-end="url(#arrow)"/>
+<text class="t" x="1027.5" y="582" font-size="12" font-weight="400" text-anchor="middle">2.1.1: findByBarcode(barcode)</text>
+<line class="line dash" x1="1285" y1="620" x2="770" y2="620" marker-end="url(#arrow)"/>
+<text class="t" x="1027.5" y="612" font-size="12" font-weight="400" text-anchor="middle">copy</text>
+<line class="line" x1="770" y1="650" x2="1285" y2="650" marker-end="url(#arrow)"/>
+<text class="t" x="1027.5" y="642" font-size="11" font-weight="400" text-anchor="middle">2.1.2: copy.isAvailable()</text>
+<line class="line dash" x1="1285" y1="680" x2="770" y2="680" marker-end="url(#arrow)"/>
+<text class="t" x="1027.5" y="672" font-size="11" font-weight="400" text-anchor="middle">true</text>
+<line class="line" x1="770" y1="710" x2="1510" y2="710" marker-end="url(#arrow)"/>
+<text class="t" x="1140.0" y="702" font-size="12" font-weight="400" text-anchor="middle">2.1.3: loan.addCopy(copy)</text>
+<line class="line dash" x1="1510" y1="740" x2="770" y2="740" marker-end="url(#arrow)"/>
+<text class="t" x="1140.0" y="732" font-size="11" font-weight="400" text-anchor="middle">ok</text>
+<line class="line dash" x1="770" y1="775" x2="90" y2="775" marker-end="url(#arrow)"/>
+<text class="t" x="430.0" y="767" font-size="11" font-weight="400" text-anchor="middle">显示图书标题和可借状态</text>
+<line class="line" x1="90" y1="850" x2="280" y2="850" marker-end="url(#arrow)"/>
+<text class="t" x="185.0" y="842" font-size="12" font-weight="400" text-anchor="middle">点击确认借书</text>
+<line class="line" x1="280" y1="880" x2="515" y2="880" marker-end="url(#arrow)"/>
+<text class="t" x="397.5" y="872" font-size="12" font-weight="400" text-anchor="middle">3: confirmCheckout(sessionId)</text>
+<line class="line" x1="515" y1="910" x2="770" y2="910" marker-end="url(#arrow)"/>
+<text class="t" x="642.5" y="902" font-size="12" font-weight="400" text-anchor="middle">3.1: confirmCheckout(sessionId)</text>
+<line class="line" x1="770" y1="940" x2="1510" y2="940" marker-end="url(#arrow)"/>
+<text class="t" x="1140.0" y="932" font-size="12" font-weight="400" text-anchor="middle">3.1.1: loan.calculateDueDate()</text>
+<line class="line" x1="770" y1="970" x2="1510" y2="970" marker-end="url(#arrow)"/>
+<text class="t" x="1140.0" y="962" font-size="12" font-weight="400" text-anchor="middle">3.1.2: loan.confirm()</text>
+<line class="line" x1="770" y1="1000" x2="1285" y2="1000" marker-end="url(#arrow)"/>
+<text class="t" x="1027.5" y="992" font-size="12" font-weight="400" text-anchor="middle">3.1.3: saveAll(copies)</text>
+<line class="line" x1="770" y1="1030" x2="1700" y2="1030" marker-end="url(#arrow)"/>
+<text class="t" x="1235.0" y="1022" font-size="12" font-weight="400" text-anchor="middle">3.1.4: save(loan)</text>
+<line class="line dash" x1="1700" y1="1060" x2="770" y2="1060" marker-end="url(#arrow)"/>
+<text class="t" x="1235.0" y="1052" font-size="11" font-weight="400" text-anchor="middle">saved</text>
+<line class="line dash" x1="770" y1="1095" x2="90" y2="1095" marker-end="url(#arrow)"/>
+<text class="t" x="430.0" y="1087" font-size="11" font-weight="400" text-anchor="middle">借书成功 + 应还日期</text>
+<rect class="note" x="60" y="1140" width="1680" height="42" rx="6" ry="6"/>
+<text class="t" x="900" y="1167" font-size="13" font-weight="400" text-anchor="middle">读图顺序：先从系统顺序图抽取系统事件 start/add/confirm，再用 Controller 接收事件，用 Service 协调领域对象与 Repository。</text>
+</svg>
