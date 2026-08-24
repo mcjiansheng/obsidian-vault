@@ -3,7 +3,7 @@
 ## 数据集选用
 本试验使用的数据集是 UCI Machine Learning Repository 的 Online Retail数据集，该数据集记录了一家英国在线零售企业中2010年12月至2011年12月期间的交易明细，业务内容主要包括订单、商品、客户、国家、数量、单价和交易时间等信息。
 原始文件：`Online Retail.xlsx`
-![[截屏2026-05-26 19.07.26.png]]
+![[BI homework/图片/截屏2026-05-26 19.07.26.png]]
 
 ## 数据清洗
 
@@ -26,7 +26,7 @@
 |删除异常价格记录|1,063|
 |删除重复记录|5,263|
 |退货 / 取消订单行数|9,251|
-![[Pasted image 20260526191317.png]]
+![[BI homework/图片/Pasted image 20260526191317.png]]
 
 ## 数据转换
 在ETL转换阶段新增了以下字段
@@ -51,7 +51,7 @@
 
 通过DBeaver，将数据csv导入PostgresSQL
 
-![[截屏2026-05-26 19.16.25.png]]
+![[BI homework/图片/截屏2026-05-26 19.16.25.png]]
 
 ## 数据仓库星型模型设计
 
@@ -76,7 +76,7 @@ DIM_PRODUCT -- FACT_SALES -- DIM_DATE
 | `dw.dim_customer` | 维度表 | 客户维度，描述客户编号和是否未知客户      |
 | `dw.dim_country`  | 维度表 | 国家维度，描述销售发生的国家或地区       |
 | `dw.fact_sales`   | 事实表 | 销售订单明细事实表，保存数量、金额、退货等度量 |
-![[截屏2026-05-26 19.26.48.png]]
+![[BI homework/图片/截屏2026-05-26 19.26.48.png]]
 ### 事实表设计
 | 字段名                    | 说明                           |
 | ---------------------- | ---------------------------- |
@@ -100,7 +100,7 @@ DIM_PRODUCT -- FACT_SALES -- DIM_DATE
 `一张发票中的一个商品明细行`
 也就是说，原始数据中的一行订单商品明细会对应事实表中的一行记录。该粒度可以支持从商品、订单、客户、国家和时间等多个角度进行灵活汇总。
 
-![[截屏2026-05-26 19.29.57.png]]
+![[BI homework/图片/截屏2026-05-26 19.29.57.png]]
 ### 维度表设计
 
 #### 时间维度
@@ -180,7 +180,7 @@ Cube的主要度量值如下：
 | 客单价  | `SUM(sales_amount) / COUNT(DISTINCT invoice_no)` | 平均每笔订单销售金额  |
 由于 PostgreSQL 不是专门的 MOLAP 引擎，因此本实验采用 SQL 语义层的方式实现 Cube，即通过视图、物化视图和聚合查询将事实表与维度表整合为多维分析结构，并基于该结构完成 OLAP 操作。
 
-![[截屏2026-05-27 10.47.54.png]]
+![[BI homework/图片/截屏2026-05-27 10.47.54.png]]
 
 ## OLAP操作说明
 
@@ -200,7 +200,7 @@ WHERE country = 'United Kingdom'
 GROUP BY year, quarter, month
 ORDER BY year, month;
 ```
-![[截屏2026-05-27 11.00.06.png]]
+![[BI homework/图片/截屏2026-05-27 11.00.06.png]]
 
 
 ### Dice 切块分析
@@ -220,7 +220,7 @@ GROUP BY country, quarter, month
 ORDER BY country, quarter, month;
 ```
 
-![[截屏2026-05-27 18.53.56.png]]
+![[BI homework/图片/截屏2026-05-27 18.53.56.png]]
 
 ### Pivot 旋转分析
 
@@ -232,7 +232,7 @@ ORDER BY sales_rank
 LIMIT 10;
 ```
 
-![[截屏2026-05-27 18.56.54.png]]
+![[BI homework/图片/截屏2026-05-27 18.56.54.png]]
 
 ### Roll-up 上卷分析
 
@@ -249,7 +249,7 @@ FROM olap.v_time_rollup_sales
 ORDER BY year NULLS LAST, quarter NULLS LAST, month NULLS LAST;
 ```
 
-![[截屏2026-05-27 18.58.53.png]]
+![[BI homework/图片/截屏2026-05-27 18.58.53.png]]
 ### Drill-down 下钻分析
 
 基于时间维度进行下钻
@@ -266,7 +266,7 @@ FROM olap.v_monthly_sales_trend
 ORDER BY year, month;
 ```
 
-![[截屏2026-05-27 18.55.08.png]]
+![[BI homework/图片/截屏2026-05-27 18.55.08.png]]
 
 ## OLAP 多维分析详细结论
 ### 一、总体经营表现
