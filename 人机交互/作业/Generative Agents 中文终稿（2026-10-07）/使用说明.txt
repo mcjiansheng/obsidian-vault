@@ -1,0 +1,24 @@
+Generative Agents：完整中文译本排版源
+
+对应原论文：Generative Agents: Interactive Simulacra of Human Behavior
+Joon Sung Park 等，UIST 2023，DOI 10.1145/3586183.3606763
+原文 22 页；中文终稿 30 页。
+
+编辑：
+1. content.json 保存全文中文、图注、5条脚注、公式、附录、109条原文参考文献信息。source_page 是原论文页码。
+2. Generative_Agents_中文排版源.html 为自包含的可编辑 HTML，原图已嵌入，无网络依赖；可直接用浏览器阅读，或用文本编辑器修改。浏览器打印结果与PDF原生排版可能不同。
+3. assets/ 包含从原论文裁出的9幅原图：PNG为高分辨率原样图像，PDF保留矢量裁图。图片内文字保持原文。
+
+重新生成完全对应的PDF（macOS，需 Swift 命令行工具）：
+在解压后的目录运行：
+    swift -module-cache-path /tmp/generative-agents-swift-cache build_pdf.swift .
+生成：Generative_Agents_完整中文终稿.pdf
+逐页渲染：
+    mkdir -p renders
+    swift -module-cache-path /tmp/generative-agents-swift-cache render_pdf.swift Generative_Agents_完整中文终稿.pdf renders/page
+
+排版：Letter纸张双栏，正文10.6pt，行距15.5pt；参考文献9.2pt。9幅原图按对应正文位置排列，并附完整中文图注。中文扩展到30页以保持字号可读。
+原论文与两个旧译本均未修改或删除。本版修复旧译稿省略正文、参考文献与部分附录，以及原图集中附在文末的问题。
+参考文献保留原始作者、标题、出版信息、DOI/URL；论文图片内容保持原样。个别原文自带的时间或示例不一致保留，不擅改实验记录。
+
+修改内容后应重新渲染所有页，检查孤行、裁切、图文顺序与公式。
